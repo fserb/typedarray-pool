@@ -2,9 +2,9 @@ typedarray-pool
 ===============
 A global pool for typed arrays.
 
-[![testling badge](https://ci.testling.com/mikolalysenko/typedarray-pool.png)](https://ci.testling.com/mikolalysenko/typedarray-pool)
+[![testling badge](https://ci.testling.com/lfdoherty/typedarray-pool.png)](https://ci.testling.com/lfdoherty/typedarray-pool)
 
-[![build status](https://secure.travis-ci.org/mikolalysenko/typedarray-pool.png)](http://travis-ci.org/mikolalysenko/typedarray-pool)
+[![build status](https://secure.travis-ci.org/lfdoherty/typedarray-pool.png)](http://travis-ci.org/lfdoherty/typedarray-pool)
 
 # Example
 
