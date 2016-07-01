@@ -1,19 +1,5 @@
 "use strict"
 
-//Check upgrade works
-var dup = require("dup")
-global.__TYPEDARRAY_POOL = {
-  UINT8   : dup([32, 0])
-, UINT16  : dup([32, 0])
-, UINT32  : dup([32, 0])
-, INT8    : dup([32, 0])
-, INT16   : dup([32, 0])
-, INT32   : dup([32, 0])
-, FLOAT   : dup([32, 0])
-, DOUBLE  : dup([32, 0])
-, DATA    : dup([32, 0])
-}
-
 var pool = require("../pool.js")
 
 require("tape")("typedarray-pool", function(t) {
@@ -69,11 +55,6 @@ require("tape")("typedarray-pool", function(t) {
     } else {
         t.assert(a instanceof Uint8Array, "unit8_clamped clamped default to uint8")
     }
-    t.assert(a.length >= i)
-    pool.free(a)
-
-    a = pool.malloc(i, "buffer")
-    t.assert(Buffer.isBuffer(a), "buffer")
     t.assert(a.length >= i)
     pool.free(a)
     
@@ -144,11 +125,6 @@ require("tape")("typedarray-pool", function(t) {
     }
     t.assert(a.length >= i)
     pool.freeUint8Clamped(a)
-
-    a = pool.mallocBuffer(i)
-    t.assert(Buffer.isBuffer(a), "buffer")
-    t.assert(a.length >= i)
-    pool.freeBuffer(a)
     
     a = pool.mallocArrayBuffer(i)
     t.assert(a instanceof ArrayBuffer, "array buffer")
