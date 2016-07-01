@@ -9,7 +9,7 @@ A global pool for typed arrays.
 # Example
 
 ```javascript
-var pool = require("typedarray-pool")
+var pool = require("@lfdoherty/typedarray-pool")
 
 //Allocate a buffer with at least 128 floats
 var f = pool.malloc(128, "float")
@@ -22,12 +22,12 @@ pool.free(f)
 
 # Install
 
-    npm install typedarray-pool
+    npm install @lfdoherty/typedarray-pool
 
 # API
 
 ```javascript
-var pool = require("typedarray-pool")
+var pool = require("@lfdoherty/typedarray-pool")
 ```
 
 ### `pool.malloc(n[, dtype])`
