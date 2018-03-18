@@ -33,7 +33,6 @@
     "construct",
     "overhead"
   ],
-  "engines" : { "node" : "^6.0.0" },
   "author": "Mikola Lysenko",
   "license": "MIT",
   "readmeFilename": "README.md",
